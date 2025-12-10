@@ -1,4 +1,4 @@
-const API = "http://proyectobackend-production-19cb.up.railway.app"; 
+const API = "https://proyectobackend-production-19cb.up.railway.app/citas"; 
 
 let citaEditando = null;
 
