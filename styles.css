@@ -1,20 +1,16 @@
-/*
-  ESTILO APPLE-LIKE & DENTALCARE MINIMALISTA
-*/
 
 :root {
-    --color-primary: #007AFF; /* Azul de Apple para acento */
-    --color-background: #F2F2F7; /* Gris claro de fondo */
-    --color-card-background: #FFFFFF; /* Blanco para tarjetas/contenedores */
-    --color-text: #1C1C1E; /* Texto oscuro */
-    --color-border: #E5E5EA; /* Borde muy suave */
+    --color-primary: #007AFF;
+    --color-background: #F2F2F7;
+    --color-card-background: #FFFFFF;
+    --color-text: #1C1C1E;
+    --color-border: #E5E5EA;
     --border-radius: 12px;
     --spacing: 20px;
 }
 
 /* Cuerpo general y tipografía */
 body {
-    /* CAMBIO: Tipografía nativa de iOS/macOS para un look 'Apple' */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
@@ -47,13 +43,11 @@ section {
     padding: var(--spacing);
     border-radius: var(--border-radius);
     margin-top: var(--spacing);
-    /* Sombra muy sutil, típica del diseño de Apple */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 /* Botones principales de navegación */
 button:not([type="submit"]), button[onclick*='eliminar'], button[onclick*='editar'] {
-    /* CAMBIO: Estilo de botón iOS, plano y con esquinas redondeadas */
     background-color: var(--color-primary);
     color: var(--color-card-background);
     border: none;
@@ -62,21 +56,19 @@ button:not([type="submit"]), button[onclick*='eliminar'], button[onclick*='edita
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.2s, transform 0.1s;
-    /* Los botones de navegación se muestran como un bloque de texto pero inline */
     display: inline-block; 
 }
 
 button:hover {
-    background-color: #0056B3; /* Tono más oscuro al pasar el mouse */
+    background-color: #0056B3;
 }
 
 button:active {
-    transform: scale(0.98); /* Efecto de "presión" */
+    transform: scale(0.98);
 }
 
 /* Formularios e Inputs/Selects */
 input:not([type="date"]):not([type="time"]), input[type="date"], input[type="time"], select {
-    /* CAMBIO: Estilo de input minimalista */
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
@@ -96,7 +88,6 @@ input:focus, select:focus {
 /* Botón de envío (dentro de los formularios) */
 form button[type="submit"] {
     width: 100%;
-    /* Estilo de botón principal con esquinas redondeadas */
     background-color: var(--color-primary);
     color: var(--color-card-background);
     border: none;
@@ -118,34 +109,31 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-    /* CAMBIO: Eliminamos los bordes duros */
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
-    overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+    overflow: hidden;
 }
 
 th, td {
     padding: 12px 15px;
     text-align: left;
-    /* Borde inferior suave para separación de filas */
     border-bottom: 1px solid var(--color-border);
 }
 
 thead th {
-    background-color: #F8F8FA; /* Fondo muy claro para encabezados */
+    background-color: #F8F8FA;
     color: var(--color-text);
     font-weight: 600;
     font-size: 14px;
-    /* Eliminamos el borde inferior para el último elemento del thead */
     border-bottom: none; 
 }
 
 tbody tr:last-child td {
-    border-bottom: none; /* Elimina el borde de la última fila */
+    border-bottom: none;
 }
 
 tbody tr:hover {
-    background-color: #FAFAFB; /* Efecto hover sutil */
+    background-color: #FAFAFB;
 }
 
 /* Colores para el estado de las citas (dentro de la tabla) */
@@ -156,15 +144,15 @@ td:nth-child(5) {
 
 /* Colores de estado alusivos a la estética */
 td:nth-child(5):contains("pendiente") {
-    color: #FF9500; /* Naranja/Amarillo (Precaución) */
+    color: #FF9500;
 }
 
 td:nth-child(5):contains("confirmada") {
-    color: #34C759; /* Verde (Éxito) */
+    color: #34C759;
 }
 
 td:nth-child(5):contains("cancelada") {
-    color: #FF3B30; /* Rojo (Peligro/Cancelación) */
+    color: #FF3B30;
 }
 
 /* Estilos específicos para los botones de Editar/Eliminar dentro de la tabla */
@@ -180,5 +168,5 @@ td button[onclick*='editar'] {
 }
 
 td button[onclick*='eliminar'] {
-    background-color: #FF3B30; /* Rojo de eliminación */
+    background-color: #FF3B30;
 }

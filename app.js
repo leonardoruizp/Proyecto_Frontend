@@ -1,4 +1,4 @@
-const API = "http://localhost:8080/citas"; 
+const API = "proyectobackend-production-19cb.up.railway.app"; 
 
 let citaEditando = null;
 
