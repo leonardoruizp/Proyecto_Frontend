@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Dental | Gestión de Citas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>✨ Agenda tu Sonrisa | DentalCare</h1>
+
+    <button onclick="mostrarSeccion('lista')">Lista de citas</button>
+    <button onclick="mostrarSeccion('crear')">Registrar cita</button>
+
+    <section id="lista">
+        <h2>🦷 Próximas Citas Agendadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Motivo</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaCitas"></tbody>
+        </table>
+    </section>
+
+    <section id="crear" style="display:none;">
+        <h2>📅 ¡Nuevo Paciente, Nueva Sonrisa!</h2>
+
+        <form id="formCrear">
+            <input type="text" id="paciente" placeholder="Nombre completo del paciente" required>
+            <input type="text" id="motivo" placeholder="Motivo de la consulta (Ej: Limpieza, Revisión)" required>
+            <input type="date" id="fecha" required>
+            <input type="time" id="hora" required>
+            <button type="submit">Guardar Cita</button>
+        </form>
+    </section>
+
+    <section id="editar" style="display:none;">
+        <h2>✏️ Ajustar la Cita de tu Paciente</h2>
+
+        <form id="formEditar">
+            <input type="text" id="editPaciente" required>
+            <input type="text" id="editMotivo" required>
+            <input type="date" id="editFecha" required>
+            <input type="time" id="editHora" required>
+
+            <select id="editEstado">
+                <option value="pendiente">pendiente</option>
+                <option value="confirmada">confirmada</option>
+                <option value="cancelada">cancelada</option>
+            </select>
+
+            <button type="submit">Actualizar Cita</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
