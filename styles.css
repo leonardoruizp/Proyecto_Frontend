@@ -37,7 +37,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Estilo para las secciones (simulando una "tarjeta" de iOS) */
+/* Estilo para las secciones */
 section {
     background-color: var(--color-card-background);
     padding: var(--spacing);
@@ -85,7 +85,7 @@ input:focus, select:focus {
     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
 }
 
-/* Botón de envío (dentro de los formularios) */
+/* Botón de envío dentro de los formularios */
 form button[type="submit"] {
     width: 100%;
     background-color: var(--color-primary);
@@ -104,7 +104,7 @@ form button[type="submit"]:hover {
     background-color: #0056B3;
 }
 
-/* Tablas - Estilo limpio y minimalista */
+/* Tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -136,13 +136,13 @@ tbody tr:hover {
     background-color: #FAFAFB;
 }
 
-/* Colores para el estado de las citas (dentro de la tabla) */
+/* Colores para el estado de las citas */
 td:nth-child(5) {
     font-weight: 600;
     text-transform: capitalize;
 }
 
-/* Colores de estado alusivos a la estética */
+/* Colores de estado*/
 td:nth-child(5):contains("pendiente") {
     color: #FF9500;
 }

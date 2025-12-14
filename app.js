@@ -1,4 +1,4 @@
-const API = "https://proyectobackend-production-0ab7.up.railway.app/citas"; 
+const API = "https://proyectobackend-production-0ab7.up.railway.app/citas"; //Conexión al backend en Railway
 
 let citaEditando = null;
 
@@ -21,6 +21,7 @@ async function cargarCitas() {
     const tabla = document.getElementById("tablaCitas");
     tabla.innerHTML = "";
 
+    //Crea la tabla con las citas
     datos.forEach(cita => {
         const fila = `
             <tr>
@@ -43,6 +44,7 @@ async function cargarCitas() {
 document.getElementById("formCrear").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    //Se crea una nueva cita
     const nueva = {
         paciente: document.getElementById("paciente").value,
         motivo: document.getElementById("motivo").value,
@@ -50,6 +52,7 @@ document.getElementById("formCrear").addEventListener("submit", async (e) => {
         hora: document.getElementById("hora").value
     };
 
+    //Se manda a llamar al Backend
     await fetch(API, {
         method: "POST",
         headers: {"Content-Type": "application/json"},

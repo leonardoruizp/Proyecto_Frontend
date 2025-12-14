@@ -11,9 +11,11 @@
 
     <h1>✨ Agenda tu Sonrisa | DentalCare</h1>
 
+    <!--Botones para cargar secciones lista y crear al hacer click-->
     <button onclick="mostrarSeccion('lista')">Lista de citas</button>
     <button onclick="mostrarSeccion('crear')">Registrar cita</button>
 
+    <!--Seccion para mostrar la lista de las citas agendadas, crea una tabla con los datos de los pacientes-->
     <section id="lista">
         <h2>🦷 Próximas Citas Agendadas</h2>
         <table>
@@ -31,6 +33,7 @@
         </table>
     </section>
 
+    <!--Sección para crear una nueva cita con los datos personales de un paciente-->
     <section id="crear" style="display:none;">
         <h2>📅 ¡Nuevo Paciente, Nueva Sonrisa!</h2>
 
@@ -43,6 +46,7 @@
         </form>
     </section>
 
+    <!--Sección para editar la cita de un paciente-->
     <section id="editar" style="display:none;">
         <h2>✏️ Ajustar la Cita de tu Paciente</h2>
 
@@ -62,6 +66,7 @@
         </form>
     </section>
 
+    <!--Conexión con el JavaScript-->
     <script src="app.js"></script>
 </body>
 </html>
